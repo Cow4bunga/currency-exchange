@@ -1,0 +1,7 @@
+{
+    "db_user": "user",
+    "db_password": "userpassword",
+    "db_host": "localhost",
+    "db_port": "3306",
+    "db_name": "currency_db"
+  }

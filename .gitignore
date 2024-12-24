@@ -1,0 +1,11 @@
+# Go build files
+*.exe
+*.exe~
+*.out
+*.test
+/vendor/
+
+# IDE files
+.idea/
+.vscode/
+
