@@ -39,7 +39,7 @@ func main() {
 
 	db, err := sqlx.Connect("mysql", dsn)
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatalln("Error connecting to the database:", err)
 	}
 	defer db.Close()
 
@@ -50,7 +50,7 @@ func main() {
 	router := mux.NewRouter()
 	routes.SetupRoutes(router)
 
-	fmt.Println("Server running on port ", portNumber)
+	log.Printf("Server running on port %d\n", portNumber)
 
 	if err := http.ListenAndServe(fmt.Sprintf(":%d", portNumber), router); err != nil {
 		log.Fatal("Server did not start: ", err)
